@@ -7,7 +7,7 @@ import xarray
 
 from neuralhydrology.datasetzoo.basedataset import BaseDataset
 from neuralhydrology.utils.config import Config
-from neuralhydrology.datautils.QS_physical_model import *
+
 
 
 class USACE(BaseDataset):
@@ -96,7 +96,9 @@ class USACE(BaseDataset):
         #df = pd.read_csv(str(self.cfg.data_dir) + f'/{basin}_12yrs_ET.csv', index_col = 'DateTime', parse_dates=True)
 
         #load data into df from csv
-        df = pd.read_csv(str(self.cfg.data_dir) + f'/{basin}_Data_NewTrainTest.csv', index_col = 'Date', parse_dates=True)
+        #df = pd.read_csv(str(self.cfg.data_dir) + f'/{basin}_Data_NewTrainTest.csv', index_col = 'Date', parse_dates=True)
+        df = pd.read_csv(str(self.cfg.data_dir) + f'/HMS_inflow_results_data.csv', index_col = 'Date', parse_dates=True)
+    
         #print(df.head())
 
         #only select the forcings, observed data you want by only selecting the columns that correspond to the above dictionary for that basin

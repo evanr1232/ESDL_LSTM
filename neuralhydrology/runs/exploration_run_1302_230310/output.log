@@ -1,0 +1,135 @@
+2024-02-13 23:03:10,102: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230310/output.log initialized.
+2024-02-13 23:03:10,102: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230310
+2024-02-13 23:03:10,103: ### Run configurations for exploration_run
+2024-02-13 23:03:10,103: experiment_name: exploration_run
+2024-02-13 23:03:10,103: train_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:03:10,104: validation_basin_file: exploration_tuler
+2024-02-13 23:03:10,104: test_basin_file: exploration_tuler
+2024-02-13 23:03:10,106: train_start_date: 1982-10-01 00:00:00
+2024-02-13 23:03:10,106: train_end_date: 1990-09-30 00:00:00
+2024-02-13 23:03:10,106: validation_start_date: 1901-10-01 00:00:00
+2024-02-13 23:03:10,107: validation_end_date: 2000-09-30 00:00:00
+2024-02-13 23:03:10,107: test_start_date: 2001-10-01 00:00:00
+2024-02-13 23:03:10,107: test_end_date: 2005-09-30 00:00:00
+2024-02-13 23:03:10,108: device: cpu
+2024-02-13 23:03:10,108: validate_every: 3
+2024-02-13 23:03:10,108: validate_n_random_basins: 1
+2024-02-13 23:03:10,109: metrics: ['NSE', 'MSE']
+2024-02-13 23:03:10,109: model: cudalstm
+2024-02-13 23:03:10,109: head: regression
+2024-02-13 23:03:10,110: output_activation: linear
+2024-02-13 23:03:10,110: hidden_size: 20
+2024-02-13 23:03:10,111: initial_forget_bias: 3
+2024-02-13 23:03:10,111: output_dropout: 0.4
+2024-02-13 23:03:10,111: optimizer: Adam
+2024-02-13 23:03:10,112: loss: MSE
+2024-02-13 23:03:10,112: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-13 23:03:10,112: batch_size: 256
+2024-02-13 23:03:10,113: epochs: 15
+2024-02-13 23:03:10,113: clip_gradient_norm: 1
+2024-02-13 23:03:10,113: predict_last_n: 1
+2024-02-13 23:03:10,114: seq_length: 365
+2024-02-13 23:03:10,114: num_workers: 8
+2024-02-13 23:03:10,115: log_interval: 5
+2024-02-13 23:03:10,115: log_tensorboard: False
+2024-02-13 23:03:10,116: log_n_figures: 1
+2024-02-13 23:03:10,116: save_weights_every: 1
+2024-02-13 23:03:10,116: dataset: usace
+2024-02-13 23:03:10,117: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-13 23:03:10,117: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-02-13 23:03:10,117: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-13 23:03:10,118: number_of_basins: 1
+2024-02-13 23:03:10,118: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230310
+2024-02-13 23:03:10,118: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230310/train_data
+2024-02-13 23:03:10,119: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230310/img_log
+2024-02-13 23:03:10,162: ### Device cpu will be used for training
+2024-02-13 23:04:34,356: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230434/output.log initialized.
+2024-02-13 23:04:34,357: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230434
+2024-02-13 23:04:34,358: ### Run configurations for exploration_run
+2024-02-13 23:04:34,359: experiment_name: exploration_run
+2024-02-13 23:04:34,360: train_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:04:34,361: validation_basin_file: exploration_tuler
+2024-02-13 23:04:34,362: test_basin_file: exploration_tuler
+2024-02-13 23:04:34,364: train_start_date: 1982-10-01 00:00:00
+2024-02-13 23:04:34,367: train_end_date: 1990-09-30 00:00:00
+2024-02-13 23:04:34,368: validation_start_date: 1901-10-01 00:00:00
+2024-02-13 23:04:34,369: validation_end_date: 2000-09-30 00:00:00
+2024-02-13 23:04:34,370: test_start_date: 2001-10-01 00:00:00
+2024-02-13 23:04:34,370: test_end_date: 2005-09-30 00:00:00
+2024-02-13 23:04:34,370: device: cpu
+2024-02-13 23:04:34,371: validate_every: 3
+2024-02-13 23:04:34,373: validate_n_random_basins: 1
+2024-02-13 23:04:34,373: metrics: ['NSE', 'MSE']
+2024-02-13 23:04:34,374: model: cudalstm
+2024-02-13 23:04:34,374: head: regression
+2024-02-13 23:04:34,375: output_activation: linear
+2024-02-13 23:04:34,375: hidden_size: 20
+2024-02-13 23:04:34,375: initial_forget_bias: 3
+2024-02-13 23:04:34,376: output_dropout: 0.4
+2024-02-13 23:04:34,376: optimizer: Adam
+2024-02-13 23:04:34,376: loss: MSE
+2024-02-13 23:04:34,377: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-13 23:04:34,378: batch_size: 256
+2024-02-13 23:04:34,378: epochs: 15
+2024-02-13 23:04:34,378: clip_gradient_norm: 1
+2024-02-13 23:04:34,379: predict_last_n: 1
+2024-02-13 23:04:34,380: seq_length: 365
+2024-02-13 23:04:34,382: num_workers: 8
+2024-02-13 23:04:34,383: log_interval: 5
+2024-02-13 23:04:34,384: log_tensorboard: False
+2024-02-13 23:04:34,385: log_n_figures: 1
+2024-02-13 23:04:34,385: save_weights_every: 1
+2024-02-13 23:04:34,386: dataset: usace
+2024-02-13 23:04:34,386: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-13 23:04:34,386: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-02-13 23:04:34,387: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-13 23:04:34,387: number_of_basins: 1
+2024-02-13 23:04:34,388: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230434
+2024-02-13 23:04:34,388: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230434/train_data
+2024-02-13 23:04:34,389: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230434/img_log
+2024-02-13 23:04:34,392: ### Device cpu will be used for training
+2024-02-13 23:04:51,944: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230451/output.log initialized.
+2024-02-13 23:04:51,945: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230451
+2024-02-13 23:04:51,946: ### Run configurations for exploration_run
+2024-02-13 23:04:51,946: experiment_name: exploration_run
+2024-02-13 23:04:51,947: train_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:04:51,947: validation_basin_file: exploration_tuler
+2024-02-13 23:04:51,948: test_basin_file: exploration_tuler
+2024-02-13 23:04:51,948: train_start_date: 1982-10-01 00:00:00
+2024-02-13 23:04:51,948: train_end_date: 1990-09-30 00:00:00
+2024-02-13 23:04:51,949: validation_start_date: 1901-10-01 00:00:00
+2024-02-13 23:04:51,949: validation_end_date: 2000-09-30 00:00:00
+2024-02-13 23:04:51,950: test_start_date: 2001-10-01 00:00:00
+2024-02-13 23:04:51,950: test_end_date: 2005-09-30 00:00:00
+2024-02-13 23:04:51,950: device: cpu
+2024-02-13 23:04:51,951: validate_every: 3
+2024-02-13 23:04:51,951: validate_n_random_basins: 1
+2024-02-13 23:04:51,952: metrics: ['NSE', 'MSE']
+2024-02-13 23:04:51,952: model: cudalstm
+2024-02-13 23:04:51,952: head: regression
+2024-02-13 23:04:51,953: output_activation: linear
+2024-02-13 23:04:51,953: hidden_size: 20
+2024-02-13 23:04:51,953: initial_forget_bias: 3
+2024-02-13 23:04:51,954: output_dropout: 0.4
+2024-02-13 23:04:51,954: optimizer: Adam
+2024-02-13 23:04:51,955: loss: MSE
+2024-02-13 23:04:51,955: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-13 23:04:51,955: batch_size: 256
+2024-02-13 23:04:51,956: epochs: 15
+2024-02-13 23:04:51,956: clip_gradient_norm: 1
+2024-02-13 23:04:51,956: predict_last_n: 1
+2024-02-13 23:04:51,957: seq_length: 365
+2024-02-13 23:04:51,957: num_workers: 8
+2024-02-13 23:04:51,957: log_interval: 5
+2024-02-13 23:04:51,958: log_tensorboard: False
+2024-02-13 23:04:51,958: log_n_figures: 1
+2024-02-13 23:04:51,959: save_weights_every: 1
+2024-02-13 23:04:51,959: dataset: usace
+2024-02-13 23:04:51,959: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-13 23:04:51,960: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-02-13 23:04:51,960: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-13 23:04:51,961: number_of_basins: 1
+2024-02-13 23:04:51,961: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230451
+2024-02-13 23:04:51,961: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230451/train_data
+2024-02-13 23:04:51,961: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_230451/img_log
+2024-02-13 23:04:51,963: ### Device cpu will be used for training

@@ -1,0 +1,122 @@
+2024-02-13 23:13:36,689: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231336/output.log initialized.
+2024-02-13 23:13:36,690: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231336
+2024-02-13 23:13:36,690: ### Run configurations for exploration_run
+2024-02-13 23:13:36,691: experiment_name: exploration_run
+2024-02-13 23:13:36,692: train_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:13:36,692: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:13:36,693: test_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:13:36,694: train_start_date: 1982-10-01 00:00:00
+2024-02-13 23:13:36,695: train_end_date: 1990-09-30 00:00:00
+2024-02-13 23:13:36,695: validation_start_date: 1901-10-01 00:00:00
+2024-02-13 23:13:36,696: validation_end_date: 2000-09-30 00:00:00
+2024-02-13 23:13:36,697: test_start_date: 2001-10-01 00:00:00
+2024-02-13 23:13:36,697: test_end_date: 2005-09-30 00:00:00
+2024-02-13 23:13:36,698: device: cpu
+2024-02-13 23:13:36,698: validate_every: 3
+2024-02-13 23:13:36,699: validate_n_random_basins: 1
+2024-02-13 23:13:36,699: metrics: ['NSE', 'MSE']
+2024-02-13 23:13:36,700: model: cudalstm
+2024-02-13 23:13:36,701: head: regression
+2024-02-13 23:13:36,702: output_activation: linear
+2024-02-13 23:13:36,703: hidden_size: 20
+2024-02-13 23:13:36,704: initial_forget_bias: 3
+2024-02-13 23:13:36,704: output_dropout: 0.4
+2024-02-13 23:13:36,705: optimizer: Adam
+2024-02-13 23:13:36,705: loss: MSE
+2024-02-13 23:13:36,706: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-13 23:13:36,706: batch_size: 256
+2024-02-13 23:13:36,706: epochs: 15
+2024-02-13 23:13:36,707: clip_gradient_norm: 1
+2024-02-13 23:13:36,707: predict_last_n: 1
+2024-02-13 23:13:36,708: seq_length: 365
+2024-02-13 23:13:36,708: num_workers: 8
+2024-02-13 23:13:36,709: log_interval: 5
+2024-02-13 23:13:36,709: log_tensorboard: False
+2024-02-13 23:13:36,709: log_n_figures: 1
+2024-02-13 23:13:36,710: save_weights_every: 1
+2024-02-13 23:13:36,710: dataset: usace
+2024-02-13 23:13:36,711: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-13 23:13:36,711: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-02-13 23:13:36,711: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-13 23:13:36,712: number_of_basins: 1
+2024-02-13 23:13:36,712: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231336
+2024-02-13 23:13:36,712: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231336/train_data
+2024-02-13 23:13:36,713: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231336/img_log
+2024-02-13 23:13:36,751: ### Device cpu will be used for training
+2024-02-13 23:13:36,753: Loading basin data into xarray data set.
+2024-02-13 23:13:36,957: Create lookup table and convert to pytorch tensor
+2024-02-13 23:13:50,791: Epoch 1 average loss: avg_loss: 0.25623, avg_total_loss: 0.25623
+2024-02-13 23:14:02,629: Epoch 2 average loss: avg_loss: 0.14968, avg_total_loss: 0.14968
+2024-02-13 23:14:16,424: Epoch 3 average loss: avg_loss: 0.12719, avg_total_loss: 0.12719
+2024-02-13 23:14:31,748: Epoch 3 average validation loss: 0.12802 -- Median validation metrics: avg_loss: 0.12802, NSE: 0.73626, MSE: 53235.06641
+2024-02-13 23:14:42,592: Epoch 4 average loss: avg_loss: 0.10809, avg_total_loss: 0.10809
+2024-02-13 23:14:57,744: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231457/output.log initialized.
+2024-02-13 23:14:57,745: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231457
+2024-02-13 23:14:57,746: ### Run configurations for exploration_run
+2024-02-13 23:14:57,747: experiment_name: exploration_run
+2024-02-13 23:14:57,748: train_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:14:57,748: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:14:57,749: test_basin_file: ../initial_exploration/exploration_tuler
+2024-02-13 23:14:57,749: train_start_date: 1982-10-01 00:00:00
+2024-02-13 23:14:57,750: train_end_date: 1990-09-30 00:00:00
+2024-02-13 23:14:57,750: validation_start_date: 1901-10-01 00:00:00
+2024-02-13 23:14:57,750: validation_end_date: 2000-09-30 00:00:00
+2024-02-13 23:14:57,751: test_start_date: 2001-10-01 00:00:00
+2024-02-13 23:14:57,751: test_end_date: 2005-09-30 00:00:00
+2024-02-13 23:14:57,752: device: cpu
+2024-02-13 23:14:57,752: validate_every: 3
+2024-02-13 23:14:57,753: validate_n_random_basins: 1
+2024-02-13 23:14:57,754: metrics: ['NSE', 'MSE']
+2024-02-13 23:14:57,754: model: cudalstm
+2024-02-13 23:14:57,755: head: regression
+2024-02-13 23:14:57,755: output_activation: linear
+2024-02-13 23:14:57,756: hidden_size: 20
+2024-02-13 23:14:57,756: initial_forget_bias: 3
+2024-02-13 23:14:57,756: output_dropout: 0.4
+2024-02-13 23:14:57,757: optimizer: Adam
+2024-02-13 23:14:57,757: loss: MSE
+2024-02-13 23:14:57,757: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-13 23:14:57,758: batch_size: 256
+2024-02-13 23:14:57,758: epochs: 15
+2024-02-13 23:14:57,758: clip_gradient_norm: 1
+2024-02-13 23:14:57,759: predict_last_n: 1
+2024-02-13 23:14:57,759: seq_length: 365
+2024-02-13 23:14:57,760: num_workers: 8
+2024-02-13 23:14:57,760: log_interval: 5
+2024-02-13 23:14:57,761: log_tensorboard: False
+2024-02-13 23:14:57,761: log_n_figures: 1
+2024-02-13 23:14:57,762: save_weights_every: 1
+2024-02-13 23:14:57,762: dataset: usace
+2024-02-13 23:14:57,763: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-13 23:14:57,764: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-02-13 23:14:57,764: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-13 23:14:57,765: number_of_basins: 1
+2024-02-13 23:14:57,765: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231457
+2024-02-13 23:14:57,765: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231457/train_data
+2024-02-13 23:14:57,766: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/neuralhydrology/runs/exploration_run_1302_231457/img_log
+2024-02-13 23:14:57,771: ### Device cpu will be used for training
+2024-02-13 23:14:57,772: Loading basin data into xarray data set.
+2024-02-13 23:14:57,947: Create lookup table and convert to pytorch tensor
+2024-02-13 23:15:08,420: Epoch 1 average loss: avg_loss: 0.26199, avg_total_loss: 0.26199
+2024-02-13 23:15:24,499: Epoch 2 average loss: avg_loss: 0.14265, avg_total_loss: 0.14265
+2024-02-13 23:15:37,558: Epoch 3 average loss: avg_loss: 0.11179, avg_total_loss: 0.11179
+2024-02-13 23:15:52,595: Epoch 3 average validation loss: 0.12081 -- Median validation metrics: avg_loss: 0.12081, NSE: 0.74930, MSE: 50603.63672
+2024-02-13 23:16:05,499: Epoch 4 average loss: avg_loss: 0.09563, avg_total_loss: 0.09563
+2024-02-13 23:16:16,859: Epoch 5 average loss: avg_loss: 0.07723, avg_total_loss: 0.07723
+2024-02-13 23:16:27,072: Epoch 6 average loss: avg_loss: 0.08593, avg_total_loss: 0.08593
+2024-02-13 23:16:42,616: Epoch 6 average validation loss: 0.11149 -- Median validation metrics: avg_loss: 0.11149, NSE: 0.77031, MSE: 46362.24219
+2024-02-13 23:16:53,448: Epoch 7 average loss: avg_loss: 0.07774, avg_total_loss: 0.07774
+2024-02-13 23:17:04,174: Epoch 8 average loss: avg_loss: 0.06831, avg_total_loss: 0.06831
+2024-02-13 23:17:15,153: Epoch 9 average loss: avg_loss: 0.07241, avg_total_loss: 0.07241
+2024-02-13 23:17:30,818: Epoch 9 average validation loss: 0.09105 -- Median validation metrics: avg_loss: 0.09105, NSE: 0.81221, MSE: 37904.33203
+2024-02-13 23:17:41,831: Epoch 10 average loss: avg_loss: 0.06491, avg_total_loss: 0.06491
+2024-02-13 23:17:52,656: Epoch 11 average loss: avg_loss: 0.06513, avg_total_loss: 0.06513
+2024-02-13 23:18:05,205: Epoch 12 average loss: avg_loss: 0.05480, avg_total_loss: 0.05480
+2024-02-13 23:18:22,647: Epoch 12 average validation loss: 0.09247 -- Median validation metrics: avg_loss: 0.09247, NSE: 0.80954, MSE: 38444.37891
+2024-02-13 23:18:33,403: Epoch 13 average loss: avg_loss: 0.05770, avg_total_loss: 0.05770
+2024-02-13 23:18:44,455: Epoch 14 average loss: avg_loss: 0.05629, avg_total_loss: 0.05629
+2024-02-13 23:18:55,785: Epoch 15 average loss: avg_loss: 0.06082, avg_total_loss: 0.06082
+2024-02-13 23:19:11,932: Epoch 15 average validation loss: 0.08383 -- Median validation metrics: avg_loss: 0.08383, NSE: 0.82820, MSE: 34676.97656
+2024-02-13 23:19:59,029: Using the model weights from runs/exploration_run_1302_231457/model_epoch015.pt
+2024-02-13 23:19:59,699: Stored metrics at runs/exploration_run_1302_231457/test/model_epoch015/test_metrics.csv
+2024-02-13 23:19:59,700: Stored results at runs/exploration_run_1302_231457/test/model_epoch015/test_results.p
