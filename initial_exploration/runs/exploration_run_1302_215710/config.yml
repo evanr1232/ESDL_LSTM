@@ -1,0 +1,95 @@
+batch_size: 256
+clip_gradient_norm: 1
+commit_hash:
+data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+dataset: usace
+device: cpu
+dynamic_inputs:
+- MF_TuleR_S10ET-POTENTIAL
+- MF_TuleR_S10FLOW
+- MF_TuleR_S10PRECIP-INC
+- MF_TuleR_S10SATURATION FRACTION
+- MF_TuleR_S10STORAGE-SOIL
+- MF_TuleR_S10SWE-OBSERVED
+- MF_TuleR_S10TEMPERATURE-AIR
+- MF_TuleR_S20ET-POTENTIAL
+- MF_TuleR_S20FLOW
+- MF_TuleR_S20PRECIP-INC
+- MF_TuleR_S20SATURATION FRACTION
+- MF_TuleR_S20STORAGE-SOIL
+- MF_TuleR_S20SWE-OBSERVED
+- MF_TuleR_S20TEMPERATURE-AIR
+- NF_TuleR_S10ET-POTENTIAL
+- NF_TuleR_S10FLOW
+- NF_TuleR_S10PRECIP-INC
+- NF_TuleR_S10SATURATION FRACTION
+- NF_TuleR_S10STORAGE-SOIL
+- NF_TuleR_S10SWE-OBSERVED
+- NF_TuleR_S10TEMPERATURE-AIR
+- ReservoirInflowFLOW
+- SF_TuleR_S10ET-POTENTIAL
+- SF_TuleR_S10FLOW
+- SF_TuleR_S10PRECIP-INC
+- SF_TuleR_S10SATURATION FRACTION
+- SF_TuleR_S10STORAGE-SOIL
+- SF_TuleR_S10SWE-OBSERVED
+- SF_TuleR_S10TEMPERATURE-AIR
+- TuleR_S10ET-POTENTIAL
+- TuleR_S10FLOW
+- TuleR_S10PRECIP-INC
+- TuleR_S10SATURATION FRACTION
+- TuleR_S10STORAGE-SOIL
+- TuleR_S10TEMPERATURE-AIR
+- TuleR_S20ET-POTENTIAL
+- TuleR_S20FLOW
+- TuleR_S20PRECIP-INC
+- TuleR_S20SATURATION FRACTION
+- TuleR_S20STORAGE-SOIL
+- TuleR_S20SWE-OBSERVED
+- TuleR_S20TEMPERATURE-AIR
+epochs: 30
+experiment_name: exploration_run
+head: regression
+hidden_size: 20
+img_log_dir: 
+  /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_1302_215710/img_log
+initial_forget_bias: 3
+learning_rate:
+  0: 0.01
+  30: 0.005
+  40: 0.001
+log_interval: 5
+log_n_figures: 1
+log_tensorboard: false
+loss: MSE
+metrics:
+- NSE
+- MSE
+model: cudalstm
+num_workers: 8
+number_of_basins: 1
+optimizer: Adam
+output_activation: linear
+output_dropout: 0.4
+package_version: 1.9.0
+predict_last_n: 1
+run_dir: 
+  /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_1302_215710
+save_weights_every: 1
+seed: 9326
+seq_length: 365
+target_variables:
+- ReservoirInflowFLOW-OBSERVED
+test_basin_file: exploration_tuler
+test_end_date: 30/09/2005
+test_start_date: 01/10/2001
+train_basin_file: exploration_tuler
+train_dir: 
+  /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_1302_215710/train_data
+train_end_date: 30/09/1990
+train_start_date: 01/10/1982
+validate_every: 3
+validate_n_random_basins: 1
+validation_basin_file: exploration_tuler
+validation_end_date: 30/09/2000
+validation_start_date: 01/10/1901

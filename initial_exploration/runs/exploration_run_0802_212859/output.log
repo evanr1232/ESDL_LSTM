@@ -1,0 +1,315 @@
+2024-02-08 21:28:59,866: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_212859/output.log initialized.
+2024-02-08 21:28:59,867: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_212859
+2024-02-08 21:28:59,868: ### Run configurations for exploration_run
+2024-02-08 21:28:59,868: experiment_name: exploration_run
+2024-02-08 21:28:59,869: train_basin_file: exploration_tuler
+2024-02-08 21:28:59,870: validation_basin_file: exploration_tuler
+2024-02-08 21:28:59,870: test_basin_file: exploration_tuler
+2024-02-08 21:28:59,872: train_start_date: 1982-10-01 00:00:00
+2024-02-08 21:28:59,872: train_end_date: 1990-09-30 00:00:00
+2024-02-08 21:28:59,873: validation_start_date: 1901-10-01 00:00:00
+2024-02-08 21:28:59,873: validation_end_date: 2000-09-30 00:00:00
+2024-02-08 21:28:59,874: test_start_date: 2001-10-01 00:00:00
+2024-02-08 21:28:59,874: test_end_date: 2005-09-30 00:00:00
+2024-02-08 21:28:59,875: device: cpu
+2024-02-08 21:28:59,875: validate_every: 3
+2024-02-08 21:28:59,875: validate_n_random_basins: 1
+2024-02-08 21:28:59,878: metrics: ['NSE', 'MSE']
+2024-02-08 21:28:59,879: model: cudalstm
+2024-02-08 21:28:59,880: head: regression
+2024-02-08 21:28:59,881: output_activation: linear
+2024-02-08 21:28:59,884: hidden_size: 20
+2024-02-08 21:28:59,891: initial_forget_bias: 3
+2024-02-08 21:28:59,899: output_dropout: 0.4
+2024-02-08 21:28:59,900: optimizer: Adam
+2024-02-08 21:28:59,902: loss: MSE
+2024-02-08 21:28:59,904: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-08 21:28:59,910: batch_size: 256
+2024-02-08 21:28:59,925: epochs: 30
+2024-02-08 21:28:59,930: clip_gradient_norm: 1
+2024-02-08 21:28:59,931: predict_last_n: 1
+2024-02-08 21:28:59,932: seq_length: 365
+2024-02-08 21:28:59,932: num_workers: 8
+2024-02-08 21:28:59,932: log_interval: 5
+2024-02-08 21:28:59,933: log_tensorboard: False
+2024-02-08 21:28:59,933: log_n_figures: 1
+2024-02-08 21:28:59,934: save_weights_every: 1
+2024-02-08 21:28:59,934: dataset: usace
+2024-02-08 21:28:59,935: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-08 21:28:59,935: dynamic_inputs: ['MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10TEMPERATURE-AIR', 'SF_TuleR_S10TEMPERATURE-AIR']
+2024-02-08 21:28:59,936: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-08 21:28:59,936: number_of_basins: 1
+2024-02-08 21:28:59,937: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_212859
+2024-02-08 21:28:59,937: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_212859/train_data
+2024-02-08 21:28:59,938: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_212859/img_log
+2024-02-08 21:28:59,967: ### Device cpu will be used for training
+2024-02-08 21:32:26,635: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213226/output.log initialized.
+2024-02-08 21:32:26,636: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213226
+2024-02-08 21:32:26,637: ### Run configurations for exploration_run
+2024-02-08 21:32:26,637: experiment_name: exploration_run
+2024-02-08 21:32:26,638: train_basin_file: exploration_tuler
+2024-02-08 21:32:26,638: validation_basin_file: exploration_tuler
+2024-02-08 21:32:26,639: test_basin_file: exploration_tuler
+2024-02-08 21:32:26,639: train_start_date: 1982-10-01 00:00:00
+2024-02-08 21:32:26,640: train_end_date: 1990-09-30 00:00:00
+2024-02-08 21:32:26,641: validation_start_date: 1901-10-01 00:00:00
+2024-02-08 21:32:26,642: validation_end_date: 2000-09-30 00:00:00
+2024-02-08 21:32:26,643: test_start_date: 2001-10-01 00:00:00
+2024-02-08 21:32:26,644: test_end_date: 2005-09-30 00:00:00
+2024-02-08 21:32:26,647: device: cpu
+2024-02-08 21:32:26,648: validate_every: 3
+2024-02-08 21:32:26,649: validate_n_random_basins: 1
+2024-02-08 21:32:26,650: metrics: ['NSE', 'MSE']
+2024-02-08 21:32:26,651: model: cudalstm
+2024-02-08 21:32:26,652: head: regression
+2024-02-08 21:32:26,654: output_activation: linear
+2024-02-08 21:32:26,656: hidden_size: 20
+2024-02-08 21:32:26,658: initial_forget_bias: 3
+2024-02-08 21:32:26,659: output_dropout: 0.4
+2024-02-08 21:32:26,662: optimizer: Adam
+2024-02-08 21:32:26,663: loss: MSE
+2024-02-08 21:32:26,664: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-08 21:32:26,664: batch_size: 256
+2024-02-08 21:32:26,665: epochs: 30
+2024-02-08 21:32:26,666: clip_gradient_norm: 1
+2024-02-08 21:32:26,667: predict_last_n: 1
+2024-02-08 21:32:26,668: seq_length: 365
+2024-02-08 21:32:26,668: num_workers: 8
+2024-02-08 21:32:26,669: log_interval: 5
+2024-02-08 21:32:26,670: log_tensorboard: False
+2024-02-08 21:32:26,671: log_n_figures: 1
+2024-02-08 21:32:26,671: save_weights_every: 1
+2024-02-08 21:32:26,672: dataset: usace
+2024-02-08 21:32:26,672: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-08 21:32:26,673: dynamic_inputs: ['MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10TEMPERATURE-AIR', 'SF_TuleR_S10TEMPERATURE-AIR']
+2024-02-08 21:32:26,674: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-08 21:32:26,674: number_of_basins: 1
+2024-02-08 21:32:26,675: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213226
+2024-02-08 21:32:26,675: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213226/train_data
+2024-02-08 21:32:26,675: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213226/img_log
+2024-02-08 21:32:26,682: ### Device cpu will be used for training
+2024-02-08 21:34:46,326: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213446/output.log initialized.
+2024-02-08 21:34:46,328: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213446
+2024-02-08 21:34:46,328: ### Run configurations for exploration_run
+2024-02-08 21:34:46,329: experiment_name: exploration_run
+2024-02-08 21:34:46,329: train_basin_file: exploration_tuler
+2024-02-08 21:34:46,330: validation_basin_file: exploration_tuler
+2024-02-08 21:34:46,330: test_basin_file: exploration_tuler
+2024-02-08 21:34:46,331: train_start_date: 1982-10-01 00:00:00
+2024-02-08 21:34:46,331: train_end_date: 1990-09-30 00:00:00
+2024-02-08 21:34:46,332: validation_start_date: 1901-10-01 00:00:00
+2024-02-08 21:34:46,332: validation_end_date: 2000-09-30 00:00:00
+2024-02-08 21:34:46,333: test_start_date: 2001-10-01 00:00:00
+2024-02-08 21:34:46,333: test_end_date: 2005-09-30 00:00:00
+2024-02-08 21:34:46,334: device: cpu
+2024-02-08 21:34:46,334: validate_every: 3
+2024-02-08 21:34:46,335: validate_n_random_basins: 1
+2024-02-08 21:34:46,335: metrics: ['NSE', 'MSE']
+2024-02-08 21:34:46,335: model: cudalstm
+2024-02-08 21:34:46,336: head: regression
+2024-02-08 21:34:46,336: output_activation: linear
+2024-02-08 21:34:46,337: hidden_size: 20
+2024-02-08 21:34:46,337: initial_forget_bias: 3
+2024-02-08 21:34:46,337: output_dropout: 0.4
+2024-02-08 21:34:46,338: optimizer: Adam
+2024-02-08 21:34:46,338: loss: MSE
+2024-02-08 21:34:46,339: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-08 21:34:46,339: batch_size: 256
+2024-02-08 21:34:46,339: epochs: 30
+2024-02-08 21:34:46,340: clip_gradient_norm: 1
+2024-02-08 21:34:46,340: predict_last_n: 1
+2024-02-08 21:34:46,341: seq_length: 365
+2024-02-08 21:34:46,342: num_workers: 8
+2024-02-08 21:34:46,342: log_interval: 5
+2024-02-08 21:34:46,342: log_tensorboard: False
+2024-02-08 21:34:46,343: log_n_figures: 1
+2024-02-08 21:34:46,343: save_weights_every: 1
+2024-02-08 21:34:46,344: dataset: usace
+2024-02-08 21:34:46,345: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-08 21:34:46,345: dynamic_inputs: ['MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10TEMPERATURE-AIR', 'SF_TuleR_S10TEMPERATURE-AIR']
+2024-02-08 21:34:46,347: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-08 21:34:46,347: number_of_basins: 1
+2024-02-08 21:34:46,348: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213446
+2024-02-08 21:34:46,348: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213446/train_data
+2024-02-08 21:34:46,348: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213446/img_log
+2024-02-08 21:34:46,364: ### Device cpu will be used for training
+2024-02-08 21:37:55,513: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213755/output.log initialized.
+2024-02-08 21:37:55,520: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213755
+2024-02-08 21:37:55,523: ### Run configurations for exploration_run
+2024-02-08 21:37:55,525: experiment_name: exploration_run
+2024-02-08 21:37:55,529: train_basin_file: exploration_tuler
+2024-02-08 21:37:55,532: validation_basin_file: exploration_tuler
+2024-02-08 21:37:55,536: test_basin_file: exploration_tuler
+2024-02-08 21:37:55,537: train_start_date: 1982-10-01 00:00:00
+2024-02-08 21:37:55,540: train_end_date: 1990-09-30 00:00:00
+2024-02-08 21:37:55,542: validation_start_date: 1901-10-01 00:00:00
+2024-02-08 21:37:55,543: validation_end_date: 2000-09-30 00:00:00
+2024-02-08 21:37:55,543: test_start_date: 2001-10-01 00:00:00
+2024-02-08 21:37:55,544: test_end_date: 2005-09-30 00:00:00
+2024-02-08 21:37:55,544: device: cpu
+2024-02-08 21:37:55,545: validate_every: 3
+2024-02-08 21:37:55,546: validate_n_random_basins: 1
+2024-02-08 21:37:55,547: metrics: ['NSE', 'MSE']
+2024-02-08 21:37:55,548: model: cudalstm
+2024-02-08 21:37:55,548: head: regression
+2024-02-08 21:37:55,549: output_activation: linear
+2024-02-08 21:37:55,549: hidden_size: 20
+2024-02-08 21:37:55,549: initial_forget_bias: 3
+2024-02-08 21:37:55,550: output_dropout: 0.4
+2024-02-08 21:37:55,551: optimizer: Adam
+2024-02-08 21:37:55,551: loss: MSE
+2024-02-08 21:37:55,552: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-08 21:37:55,552: batch_size: 256
+2024-02-08 21:37:55,552: epochs: 30
+2024-02-08 21:37:55,553: clip_gradient_norm: 1
+2024-02-08 21:37:55,553: predict_last_n: 1
+2024-02-08 21:37:55,553: seq_length: 365
+2024-02-08 21:37:55,554: num_workers: 8
+2024-02-08 21:37:55,554: log_interval: 5
+2024-02-08 21:37:55,559: log_tensorboard: False
+2024-02-08 21:37:55,563: log_n_figures: 1
+2024-02-08 21:37:55,565: save_weights_every: 1
+2024-02-08 21:37:55,565: dataset: usace
+2024-02-08 21:37:55,566: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-08 21:37:55,567: dynamic_inputs: ['MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10TEMPERATURE-AIR', 'SF_TuleR_S10TEMPERATURE-AIR']
+2024-02-08 21:37:55,568: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-08 21:37:55,569: number_of_basins: 1
+2024-02-08 21:37:55,569: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213755
+2024-02-08 21:37:55,569: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213755/train_data
+2024-02-08 21:37:55,570: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_213755/img_log
+2024-02-08 21:37:55,575: ### Device cpu will be used for training
+2024-02-08 21:42:17,649: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214217/output.log initialized.
+2024-02-08 21:42:17,650: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214217
+2024-02-08 21:42:17,651: ### Run configurations for exploration_run
+2024-02-08 21:42:17,651: experiment_name: exploration_run
+2024-02-08 21:42:17,652: train_basin_file: exploration_tuler
+2024-02-08 21:42:17,652: validation_basin_file: exploration_tuler
+2024-02-08 21:42:17,653: test_basin_file: exploration_tuler
+2024-02-08 21:42:17,653: train_start_date: 1982-10-01 00:00:00
+2024-02-08 21:42:17,654: train_end_date: 1990-09-30 00:00:00
+2024-02-08 21:42:17,655: validation_start_date: 1901-10-01 00:00:00
+2024-02-08 21:42:17,655: validation_end_date: 2000-09-30 00:00:00
+2024-02-08 21:42:17,656: test_start_date: 2001-10-01 00:00:00
+2024-02-08 21:42:17,656: test_end_date: 2005-09-30 00:00:00
+2024-02-08 21:42:17,657: device: cpu
+2024-02-08 21:42:17,657: validate_every: 3
+2024-02-08 21:42:17,657: validate_n_random_basins: 1
+2024-02-08 21:42:17,658: metrics: ['NSE', 'MSE']
+2024-02-08 21:42:17,658: model: cudalstm
+2024-02-08 21:42:17,659: head: regression
+2024-02-08 21:42:17,660: output_activation: linear
+2024-02-08 21:42:17,660: hidden_size: 20
+2024-02-08 21:42:17,661: initial_forget_bias: 3
+2024-02-08 21:42:17,662: output_dropout: 0.4
+2024-02-08 21:42:17,662: optimizer: Adam
+2024-02-08 21:42:17,662: loss: MSE
+2024-02-08 21:42:17,663: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-08 21:42:17,663: batch_size: 256
+2024-02-08 21:42:17,664: epochs: 30
+2024-02-08 21:42:17,664: clip_gradient_norm: 1
+2024-02-08 21:42:17,664: predict_last_n: 1
+2024-02-08 21:42:17,664: seq_length: 365
+2024-02-08 21:42:17,665: num_workers: 8
+2024-02-08 21:42:17,665: log_interval: 5
+2024-02-08 21:42:17,665: log_tensorboard: False
+2024-02-08 21:42:17,665: log_n_figures: 1
+2024-02-08 21:42:17,666: save_weights_every: 1
+2024-02-08 21:42:17,666: dataset: usace
+2024-02-08 21:42:17,666: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-08 21:42:17,667: dynamic_inputs: ['MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10TEMPERATURE-AIR', 'SF_TuleR_S10TEMPERATURE-AIR']
+2024-02-08 21:42:17,667: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-08 21:42:17,668: number_of_basins: 1
+2024-02-08 21:42:17,668: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214217
+2024-02-08 21:42:17,669: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214217/train_data
+2024-02-08 21:42:17,669: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214217/img_log
+2024-02-08 21:42:17,673: ### Device cpu will be used for training
+2024-02-08 21:43:15,818: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214315/output.log initialized.
+2024-02-08 21:43:15,822: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214315
+2024-02-08 21:43:15,822: ### Run configurations for exploration_run
+2024-02-08 21:43:15,823: experiment_name: exploration_run
+2024-02-08 21:43:15,823: train_basin_file: exploration_tuler
+2024-02-08 21:43:15,824: validation_basin_file: exploration_tuler
+2024-02-08 21:43:15,824: test_basin_file: exploration_tuler
+2024-02-08 21:43:15,825: train_start_date: 1982-10-01 00:00:00
+2024-02-08 21:43:15,826: train_end_date: 1990-09-30 00:00:00
+2024-02-08 21:43:15,826: validation_start_date: 1901-10-01 00:00:00
+2024-02-08 21:43:15,827: validation_end_date: 2000-09-30 00:00:00
+2024-02-08 21:43:15,827: test_start_date: 2001-10-01 00:00:00
+2024-02-08 21:43:15,828: test_end_date: 2005-09-30 00:00:00
+2024-02-08 21:43:15,828: device: cpu
+2024-02-08 21:43:15,828: validate_every: 3
+2024-02-08 21:43:15,829: validate_n_random_basins: 1
+2024-02-08 21:43:15,829: metrics: ['NSE', 'MSE']
+2024-02-08 21:43:15,830: model: cudalstm
+2024-02-08 21:43:15,830: head: regression
+2024-02-08 21:43:15,830: output_activation: linear
+2024-02-08 21:43:15,831: hidden_size: 20
+2024-02-08 21:43:15,831: initial_forget_bias: 3
+2024-02-08 21:43:15,832: output_dropout: 0.4
+2024-02-08 21:43:15,832: optimizer: Adam
+2024-02-08 21:43:15,832: loss: MSE
+2024-02-08 21:43:15,833: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-08 21:43:15,833: batch_size: 256
+2024-02-08 21:43:15,833: epochs: 30
+2024-02-08 21:43:15,834: clip_gradient_norm: 1
+2024-02-08 21:43:15,834: predict_last_n: 1
+2024-02-08 21:43:15,835: seq_length: 365
+2024-02-08 21:43:15,835: num_workers: 8
+2024-02-08 21:43:15,835: log_interval: 5
+2024-02-08 21:43:15,836: log_tensorboard: False
+2024-02-08 21:43:15,836: log_n_figures: 1
+2024-02-08 21:43:15,837: save_weights_every: 1
+2024-02-08 21:43:15,838: dataset: usace
+2024-02-08 21:43:15,838: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-08 21:43:15,839: dynamic_inputs: ['MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10TEMPERATURE-AIR', 'SF_TuleR_S10TEMPERATURE-AIR']
+2024-02-08 21:43:15,840: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-08 21:43:15,840: number_of_basins: 1
+2024-02-08 21:43:15,841: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214315
+2024-02-08 21:43:15,842: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214315/train_data
+2024-02-08 21:43:15,842: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214315/img_log
+2024-02-08 21:43:15,847: ### Device cpu will be used for training
+2024-02-08 21:46:38,348: Logging to /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214638/output.log initialized.
+2024-02-08 21:46:38,349: ### Folder structure created at /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214638
+2024-02-08 21:46:38,350: ### Run configurations for exploration_run
+2024-02-08 21:46:38,351: experiment_name: exploration_run
+2024-02-08 21:46:38,352: train_basin_file: exploration_tuler
+2024-02-08 21:46:38,354: validation_basin_file: exploration_tuler
+2024-02-08 21:46:38,355: test_basin_file: exploration_tuler
+2024-02-08 21:46:38,356: train_start_date: 1982-10-01 00:00:00
+2024-02-08 21:46:38,357: train_end_date: 1990-09-30 00:00:00
+2024-02-08 21:46:38,358: validation_start_date: 1901-10-01 00:00:00
+2024-02-08 21:46:38,359: validation_end_date: 2000-09-30 00:00:00
+2024-02-08 21:46:38,360: test_start_date: 2001-10-01 00:00:00
+2024-02-08 21:46:38,361: test_end_date: 2005-09-30 00:00:00
+2024-02-08 21:46:38,361: device: cpu
+2024-02-08 21:46:38,362: validate_every: 3
+2024-02-08 21:46:38,364: validate_n_random_basins: 1
+2024-02-08 21:46:38,365: metrics: ['NSE', 'MSE']
+2024-02-08 21:46:38,365: model: cudalstm
+2024-02-08 21:46:38,366: head: regression
+2024-02-08 21:46:38,366: output_activation: linear
+2024-02-08 21:46:38,367: hidden_size: 20
+2024-02-08 21:46:38,367: initial_forget_bias: 3
+2024-02-08 21:46:38,368: output_dropout: 0.4
+2024-02-08 21:46:38,369: optimizer: Adam
+2024-02-08 21:46:38,370: loss: MSE
+2024-02-08 21:46:38,371: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-02-08 21:46:38,372: batch_size: 256
+2024-02-08 21:46:38,372: epochs: 30
+2024-02-08 21:46:38,373: clip_gradient_norm: 1
+2024-02-08 21:46:38,374: predict_last_n: 1
+2024-02-08 21:46:38,374: seq_length: 365
+2024-02-08 21:46:38,375: num_workers: 8
+2024-02-08 21:46:38,376: log_interval: 5
+2024-02-08 21:46:38,377: log_tensorboard: False
+2024-02-08 21:46:38,378: log_n_figures: 1
+2024-02-08 21:46:38,379: save_weights_every: 1
+2024-02-08 21:46:38,381: dataset: usace
+2024-02-08 21:46:38,381: data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins
+2024-02-08 21:46:38,382: dynamic_inputs: ['MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10TEMPERATURE-AIR', 'SF_TuleR_S10TEMPERATURE-AIR']
+2024-02-08 21:46:38,382: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-02-08 21:46:38,382: number_of_basins: 1
+2024-02-08 21:46:38,383: run_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214638
+2024-02-08 21:46:38,383: train_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214638/train_data
+2024-02-08 21:46:38,384: img_log_dir: /Users/evanrobert/Documents/ESDL_Research/ESDL_LSTM/initial_exploration/runs/exploration_run_0802_214638/img_log
+2024-02-08 21:46:38,389: ### Device cpu will be used for training

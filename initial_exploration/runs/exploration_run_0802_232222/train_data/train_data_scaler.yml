@@ -1,0 +1,354 @@
+xarray_feature_scale:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    MF_TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.005698745604604483
+    MF_TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 20.18703269958496
+    MF_TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.022505542263388634
+    MF_TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.23274292051792145
+    MF_TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.163715124130249
+    MF_TuleR_S10SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 0.10620345175266266
+    MF_TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 12.778297424316406
+    MF_TuleR_S20ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.004515710286796093
+    MF_TuleR_S20FLOW:
+      dims: []
+      attrs: {}
+      data: 186.930419921875
+    MF_TuleR_S20PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.03295646607875824
+    MF_TuleR_S20SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.2222871035337448
+    MF_TuleR_S20STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.1114355325698853
+    MF_TuleR_S20SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 5.2698445320129395
+    MF_TuleR_S20TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 12.27596378326416
+    NF_TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.005512611474841833
+    NF_TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 93.15286254882812
+    NF_TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.02519354037940502
+    NF_TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.2267461121082306
+    NF_TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.1337292194366455
+    NF_TuleR_S10SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 1.3592827320098877
+    NF_TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 12.494386672973633
+    ReservoirInflowFLOW:
+      dims: []
+      attrs: {}
+      data: 376.7557678222656
+    ReservoirInflowFLOW-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 445.70159912109375
+    SF_TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.005439332686364651
+    SF_TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 103.24456787109375
+    SF_TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.024028906598687172
+    SF_TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.22621338069438934
+    SF_TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.1310662031173706
+    SF_TuleR_S10SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 1.041475772857666
+    SF_TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 12.688779830932617
+    TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.007126496639102697
+    TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 6.273549556732178
+    TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.013572904281318188
+    TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.20912982523441315
+    TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.045648217201233
+    TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 12.930237770080566
+    TuleR_S20ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.006559825502336025
+    TuleR_S20FLOW:
+      dims: []
+      attrs: {}
+      data: 15.58542537689209
+    TuleR_S20PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.017456457018852234
+    TuleR_S20SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.22572745382785797
+    TuleR_S20STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.1286370754241943
+    TuleR_S20SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 0.013760555535554886
+    TuleR_S20TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 12.729378700256348
+xarray_feature_center:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    MF_TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.010421489365398884
+    MF_TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 9.066192626953125
+    MF_TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.008416694588959217
+    MF_TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.2960573732852936
+    MF_TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.4802862405776978
+    MF_TuleR_S10SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 0.028561078011989594
+    MF_TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 55.43836975097656
+    MF_TuleR_S20ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.007275283802300692
+    MF_TuleR_S20FLOW:
+      dims: []
+      attrs: {}
+      data: 87.60897827148438
+    MF_TuleR_S20PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.012578173540532589
+    MF_TuleR_S20SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.3722079396247864
+    MF_TuleR_S20STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.8610398769378662
+    MF_TuleR_S20SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 3.20131778717041
+    MF_TuleR_S20TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 46.42398452758789
+    NF_TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.010048949159681797
+    NF_TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 51.729820251464844
+    NF_TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.009472344070672989
+    NF_TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.30942121148109436
+    NF_TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.547105312347412
+    NF_TuleR_S10SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 0.8075203895568848
+    NF_TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 54.324729919433594
+    ReservoirInflowFLOW:
+      dims: []
+      attrs: {}
+      data: 212.1984100341797
+    ReservoirInflowFLOW-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 232.49371337890625
+    SF_TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.00969623401761055
+    SF_TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 54.48155975341797
+    SF_TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.009126320481300354
+    SF_TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.309383749961853
+    SF_TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.5469188690185547
+    SF_TuleR_S10SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 0.5957552194595337
+    SF_TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 53.33928680419922
+    TuleR_S10ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.013610146939754486
+    TuleR_S10FLOW:
+      dims: []
+      attrs: {}
+      data: 2.430494546890259
+    TuleR_S10PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.004604723304510117
+    TuleR_S10SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.20878347754478455
+    TuleR_S10STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.0439176559448242
+    TuleR_S10TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 63.30345153808594
+    TuleR_S20ET-POTENTIAL:
+      dims: []
+      attrs: {}
+      data: 0.012464889325201511
+    TuleR_S20FLOW:
+      dims: []
+      attrs: {}
+      data: 6.880319595336914
+    TuleR_S20PRECIP-INC:
+      dims: []
+      attrs: {}
+      data: 0.006271521560847759
+    TuleR_S20SATURATION FRACTION:
+      dims: []
+      attrs: {}
+      data: 0.2506415843963623
+    TuleR_S20STORAGE-SOIL:
+      dims: []
+      attrs: {}
+      data: 1.253207802772522
+    TuleR_S20SWE-OBSERVED:
+      dims: []
+      attrs: {}
+      data: 0.002247343072667718
+    TuleR_S20TEMPERATURE-AIR:
+      dims: []
+      attrs: {}
+      data: 60.65980529785156
