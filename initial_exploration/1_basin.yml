@@ -1,7 +1,7 @@
 # --- Experiment configurations --------------------------------------------------------------------
 
 # experiment name, used as folder name
-experiment_name: exploration_run
+experiment_name: ensemble_run
 
 # files to specify training, validation and test basins (relative to code root or absolute path)
 train_basin_file: ../initial_exploration/exploration_tuler
@@ -49,13 +49,13 @@ output_activation: linear
 # ----> General settings <----
 
 # Number of cell states of the LSTM
-hidden_size: 20
+hidden_size: 64
 
 # Initial bias value of the forget gate
 initial_forget_bias: 3
 
 # Dropout applied to the output of the LSTM
-output_dropout: 0.4
+output_dropout: 0.5
 
 # --- Training configuration -----------------------------------------------------------------------
 
@@ -75,7 +75,7 @@ learning_rate:
 batch_size: 256
 
 # Number of training epochs
-epochs: 15
+epochs: 32
 
 # If a value, clips the gradients during training to that norm.
 clip_gradient_norm: 1
@@ -86,7 +86,7 @@ predict_last_n: 1
 
 # Length of the input sequence
 # If use_frequencies is used, this needs to be a dict mapping each frequency to a seq_length, else an int.
-seq_length: 365
+seq_length: 90
 
 # Number of parallel workers used in the data pipeline
 num_workers: 8

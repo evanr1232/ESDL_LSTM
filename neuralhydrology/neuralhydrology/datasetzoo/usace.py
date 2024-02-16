@@ -92,11 +92,8 @@ class USACE(BaseDataset):
                         }
 
         # get forcings
-        #print('basin name is', basin)
-        #df = pd.read_csv(str(self.cfg.data_dir) + f'/{basin}_12yrs_ET.csv', index_col = 'DateTime', parse_dates=True)
-
+       
         #load data into df from csv
-        #df = pd.read_csv(str(self.cfg.data_dir) + f'/{basin}_Data_NewTrainTest.csv', index_col = 'Date', parse_dates=True)
         df = pd.read_csv(str(self.cfg.data_dir) + f'/HMS_inflow_results_data.csv', index_col = 'Date', parse_dates=True)
     
         #print(df.head())
@@ -104,31 +101,6 @@ class USACE(BaseDataset):
         #only select the forcings, observed data you want by only selecting the columns that correspond to the above dictionary for that basin
         df = df.loc[:, forcings_d[basin]+discharge_d[basin]]
 
-        # rename columns
-        # new_col_names = []
-        # for col in df.columns:
-        #     if 'precipitation' in col.lower():
-        #         new_col_names.append('PRCP(mm/day)')
-        #     elif 'evapotranspiration' in col.lower():
-        #         new_col_names.append('PET(mm/day)')
-        #     elif 'airtemperature' in col.lower():
-        #         new_col_names.append('Tavg(C)')
-        #     elif 'discharge' in col.lower():
-        #         new_col_names.append('QObs(mm/d)')
-        #     #elif 'solarradiation' in col.lower()
-        #      #   new_col_names.append('SRAD(W/m2)')
-        #     else:
-        #         raise RuntimeError(f"Forcing type is not recognized")
-
-         #df['PET(mm/day)'] = get_priestley_taylor_pet(t_min = df['Tavg(C)'].values,
-          #                                      t_max = df['Tavg(C)'].values,
-           #                                     s_rad = df['SRAD(W/m2)'].values,
-            #                                    lat = att_df.loc[basin, 'gauge_lat'], 
-             #                                   elev = att_df.loc[basin, 'elev_mean'],
-              #                                  doy = df.index.dayofyear.values)
-
-        # df.columns = new_col_names
-        
         #rename date index
         df = df.rename_axis('date')
         #print(df.head())
