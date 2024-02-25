@@ -1,4 +1,7 @@
-name: neuralhydrology
+#name: neuralhydrology
+
+name: ESDL_LSTM
+
 channels:
   - pytorch
   - defaults
