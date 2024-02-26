@@ -1,7 +1,7 @@
 # --- Experiment configurations --------------------------------------------------------------------
 
 # experiment name, used as folder name
-experiment_name: ensemble_run_365
+experiment_name: discontinuous_train_test
 
 # files to specify training, validation and test basins (relative to code root or absolute path)
 train_basin_file: ../initial_exploration/exploration_tuler
@@ -9,8 +9,8 @@ validation_basin_file: ../initial_exploration/exploration_tuler
 test_basin_file: ../initial_exploration/exploration_tuler
 
 # training, validation and test time periods (format = 'dd/mm/yyyy')
-train_start_date: "01/10/1982"
-train_end_date: "30/09/1997"
+train_start_date: ["01/10/1982", "01/10/1995"]
+train_end_date: ["30/09/1989", "30/09/1997"]
 validation_start_date: "01/10/1997"
 validation_end_date: "30/09/2000"
 test_start_date: "01/10/2000"
@@ -75,7 +75,7 @@ learning_rate:
 batch_size: 256
 
 # Number of training epochs
-epochs: 32
+epochs: 14
 
 # If a value, clips the gradients during training to that norm.
 clip_gradient_norm: 1
@@ -153,7 +153,7 @@ dynamic_inputs:
   - TuleR_S10PRECIP-INC
   - TuleR_S10SATURATION FRACTION
   - TuleR_S10STORAGE-SOIL
-  - TuleR_S10SWE-OBSERVED #
+  # - TuleR_S10SWE-OBSERVED #gives NoTrainDataError if enabled
   - TuleR_S10TEMPERATURE-AIR
   - TuleR_S20ET-POTENTIAL
   - TuleR_S20FLOW
