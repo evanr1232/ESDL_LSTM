@@ -6,9 +6,11 @@ from pathlib import Path
 # make sure code directory is in path, even if the package is not installed using the setup.py
 sys.path.append(str(Path(__file__).parent.parent))
 from neuralhydrology.evaluation.evaluate import start_evaluation
+from neuralhydrology.evaluation.evaluate import ESDL_start_evaluation
 from neuralhydrology.training.train import start_training
 from neuralhydrology.utils.config import Config
 from neuralhydrology.utils.logging_utils import setup_logging
+import pandas as pd
 
 
 def _get_args() -> dict:
@@ -168,6 +170,57 @@ def eval_run(run_dir: Path, period: str, epoch: int = None, gpu: int = None):
 
     start_evaluation(cfg=config, run_dir=run_dir, epoch=epoch, period=period)
 
+def ESDL_eval_run_test_period(run_dir: Path, epoch: int = None, gpu: int = None):
+    """Start evaluating a trained model.
+    
+    Parameters
+    ----------
+    run_dir : Path
+        Path to the run directory.
+    epoch : int, optional
+        Define a specific epoch to use. By default, the weights of the last epoch are used.  
+    gpu : int, optional
+        GPU id to use. Will override config argument 'device'. A value less than zero indicates CPU.
+
+    Returns
+    -------
+    DataFrame
+        A DataFrame containing the concatonation of the predicted and observed value for each discontinuous 
+        time period, with a "source" column indicating which time period it came from.
+    """
+    period = "test"
+
+    config = Config(run_dir / "config.yml")
+
+    # check if a GPU has been specified as command line argument. If yes, overwrite config
+    if gpu is not None and gpu >= 0:
+        config.device = f"cuda:{gpu}"
+    if gpu is not None and gpu < 0:
+        config.device = "cpu"
+
+    test_start_dates_timestamp = config.test_start_date
+    test_end_dates_timestamp = config.test_end_date
+
+    test_start_dates = [test_start_dates_timestamp[i].strftime('%d/%m/%Y') for i in range(len(test_start_dates_timestamp))]
+    test_end_dates = [test_end_dates_timestamp[i].strftime('%d/%m/%Y') for i in range(len(test_start_dates_timestamp))]
+
+    dfs = []
+    
+    for i in range(len(test_start_dates)):
+        config.update_config({'test_start_date': test_start_dates[i]})
+        config.update_config({'test_end_date': test_end_dates[i]})
+        period_results = ESDL_start_evaluation(cfg=config, run_dir=run_dir, epoch=epoch, period=period)
+
+        #turn xarray dataset to dataframe
+        period_results_df = period_results['Tuler']['1D']['xr'].to_dataframe()
+        period_results_df['source'] = i
+        period_results_df = period_results_df.droplevel('time_step')
+        period_results_df = period_results_df.reset_index(inplace=False)
+        dfs.append(period_results_df)
+    
+    concatonated_dfs = pd.concat(dfs, ignore_index=False, axis=0)
+    
+    return concatonated_dfs
 
 if __name__ == "__main__":
     _main()
