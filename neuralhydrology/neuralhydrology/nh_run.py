@@ -2,15 +2,18 @@
 import argparse
 import sys
 from pathlib import Path
+from typing import List
 
 # make sure code directory is in path, even if the package is not installed using the setup.py
 sys.path.append(str(Path(__file__).parent.parent))
 from neuralhydrology.evaluation.evaluate import start_evaluation
 from neuralhydrology.evaluation.evaluate import ESDL_start_evaluation
+from neuralhydrology.evaluation.metrics import calculate_metrics
 from neuralhydrology.training.train import start_training
 from neuralhydrology.utils.config import Config
 from neuralhydrology.utils.logging_utils import setup_logging
 import pandas as pd
+
 
 
 def _get_args() -> dict:
@@ -170,7 +173,7 @@ def eval_run(run_dir: Path, period: str, epoch: int = None, gpu: int = None):
 
     start_evaluation(cfg=config, run_dir=run_dir, epoch=epoch, period=period)
 
-def ESDL_eval_run_test_period(run_dir: Path, epoch: int = None, gpu: int = None):
+def ESDL_eval_run_test_period(run_dir: Path, metrics: List[str] = ['nse', 'rmse'], epoch: int = None, gpu: int = None):
     """Start evaluating a trained model.
     
     Parameters
@@ -187,6 +190,8 @@ def ESDL_eval_run_test_period(run_dir: Path, epoch: int = None, gpu: int = None)
     DataFrame
         A DataFrame containing the concatonation of the predicted and observed value for each discontinuous 
         time period, with a "source" column indicating which time period it came from.
+    Dict[str, float]
+        Dictionary with keys corresponding to metric name and values corresponding to metric values.
     """
     period = "test"
 
@@ -220,7 +225,11 @@ def ESDL_eval_run_test_period(run_dir: Path, epoch: int = None, gpu: int = None)
     
     concatonated_dfs = pd.concat(dfs, ignore_index=False, axis=0)
     
-    return concatonated_dfs
+    obs = concatonated_dfs['ReservoirInflowFLOW-OBSERVED_obs'].to_xarray()
+    sim = concatonated_dfs['ReservoirInflowFLOW-OBSERVED_sim'].to_xarray()
+    metrics = calculate_metrics(obs, sim, metrics)
+
+    return concatonated_dfs, metrics
 
 if __name__ == "__main__":
     _main()
