@@ -1,7 +1,7 @@
 # --- Experiment configurations --------------------------------------------------------------------
 
 # experiment name, used as folder name
-experiment_name: discontinuous_train_test
+experiment_name: parallel_grid_search_test
 
 # files to specify training, validation and test basins (relative to code root or absolute path)
 train_basin_file: ../initial_exploration/exploration_tuler
@@ -75,7 +75,8 @@ learning_rate:
 batch_size: 256
 
 # Number of training epochs
-epochs: 14
+#FLAG
+epochs: 1
 
 # If a value, clips the gradients during training to that norm.
 clip_gradient_norm: 1
@@ -86,7 +87,7 @@ predict_last_n: 1
 
 # Length of the input sequence
 # If use_frequencies is used, this needs to be a dict mapping each frequency to a seq_length, else an int.
-seq_length: 90
+seq_length: 365
 
 # Number of parallel workers used in the data pipeline
 num_workers: 1
@@ -101,7 +102,8 @@ log_tensorboard: True
 log_n_figures: 1
 
 # Save model weights every n epochs
-save_weights_every: 4
+#FLAG
+save_weights_every: 1
 
 # --- Data configurations --------------------------------------------------------------------------
 
@@ -109,7 +111,7 @@ save_weights_every: 4
 dataset: usace
 
 # Path to data set root
-data_dir: /global/home/groups/pc_dsdisc/ESDL/ESDL_LSTM/initial_exploration/
+data_dir: ../initial_exploration/
 
 # Forcing product [daymet, maurer, maurer_extended, nldas, nldas_extended, nldas_hourly]
 # can be either a list of forcings or a single forcing product

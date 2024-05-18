@@ -1,0 +1,479 @@
+2024-04-24 15:38:38,843: Logging to global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153838/output.log initialized.
+2024-04-24 15:38:38,844: ### Folder structure created at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153838
+2024-04-24 15:38:38,844: ### Run configurations for parallel_grid_search_test63_0.5_90
+2024-04-24 15:38:38,845: experiment_name: parallel_grid_search_test63_0.5_90
+2024-04-24 15:38:38,846: run_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153838
+2024-04-24 15:38:38,847: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:38:38,848: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:38:38,849: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:38:38,850: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:38:38,851: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:38:38,852: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:38:38,852: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:38:38,853: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:38:38,854: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:38:38,855: device: cpu
+2024-04-24 15:38:38,855: validate_every: 5
+2024-04-24 15:38:38,856: validate_n_random_basins: 1
+2024-04-24 15:38:38,857: metrics: ['NSE', 'MSE']
+2024-04-24 15:38:38,857: model: cudalstm
+2024-04-24 15:38:38,858: head: regression
+2024-04-24 15:38:38,859: output_activation: linear
+2024-04-24 15:38:38,859: hidden_size: 63
+2024-04-24 15:38:38,860: initial_forget_bias: 3
+2024-04-24 15:38:38,860: output_dropout: 0.5
+2024-04-24 15:38:38,861: optimizer: Adam
+2024-04-24 15:38:38,862: loss: MSE
+2024-04-24 15:38:38,863: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:38:38,863: batch_size: 256
+2024-04-24 15:38:38,864: epochs: 1
+2024-04-24 15:38:38,865: clip_gradient_norm: 1
+2024-04-24 15:38:38,865: predict_last_n: 1
+2024-04-24 15:38:38,866: seq_length: 90
+2024-04-24 15:38:38,867: num_workers: 1
+2024-04-24 15:38:38,868: log_interval: 5
+2024-04-24 15:38:38,868: log_tensorboard: True
+2024-04-24 15:38:38,869: log_n_figures: 1
+2024-04-24 15:38:38,870: save_weights_every: 1
+2024-04-24 15:38:38,870: dataset: usace
+2024-04-24 15:38:38,871: data_dir: ../initial_exploration
+2024-04-24 15:38:38,872: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:38:38,873: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:38:38,874: number_of_basins: 1
+2024-04-24 15:38:38,875: train_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153838/train_data
+2024-04-24 15:38:38,875: img_log_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153838/img_log
+2024-04-24 15:38:38,885: ### Device cpu will be used for training
+2024-04-24 15:38:38,886: Loading basin data into xarray data set.
+2024-04-24 15:38:39,082: Create lookup table and convert to pytorch tensor
+2024-04-24 15:39:58,913: Logging to global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/output.log initialized.
+2024-04-24 15:39:58,914: ### Folder structure created at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958
+2024-04-24 15:39:58,915: ### Run configurations for parallel_grid_search_test63_0.5_90
+2024-04-24 15:39:58,916: experiment_name: parallel_grid_search_test63_0.5_90
+2024-04-24 15:39:58,916: run_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958
+2024-04-24 15:39:58,917: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:39:58,918: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:39:58,919: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:39:58,919: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:39:58,920: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:39:58,921: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:39:58,921: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:39:58,923: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:39:58,923: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:39:58,924: device: cpu
+2024-04-24 15:39:58,925: validate_every: 5
+2024-04-24 15:39:58,925: validate_n_random_basins: 1
+2024-04-24 15:39:58,926: metrics: ['NSE', 'MSE']
+2024-04-24 15:39:58,926: model: cudalstm
+2024-04-24 15:39:58,927: head: regression
+2024-04-24 15:39:58,928: output_activation: linear
+2024-04-24 15:39:58,929: hidden_size: 63
+2024-04-24 15:39:58,930: initial_forget_bias: 3
+2024-04-24 15:39:58,930: output_dropout: 0.5
+2024-04-24 15:39:58,931: optimizer: Adam
+2024-04-24 15:39:58,931: loss: MSE
+2024-04-24 15:39:58,932: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:39:58,932: batch_size: 256
+2024-04-24 15:39:58,933: epochs: 1
+2024-04-24 15:39:58,934: clip_gradient_norm: 1
+2024-04-24 15:39:58,934: predict_last_n: 1
+2024-04-24 15:39:58,935: seq_length: 90
+2024-04-24 15:39:58,936: num_workers: 1
+2024-04-24 15:39:58,937: log_interval: 5
+2024-04-24 15:39:58,937: log_tensorboard: True
+2024-04-24 15:39:58,938: log_n_figures: 1
+2024-04-24 15:39:58,939: save_weights_every: 1
+2024-04-24 15:39:58,939: dataset: usace
+2024-04-24 15:39:58,940: data_dir: ../initial_exploration
+2024-04-24 15:39:58,940: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:39:58,941: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:39:58,941: number_of_basins: 1
+2024-04-24 15:39:58,942: train_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/train_data
+2024-04-24 15:39:58,942: img_log_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/img_log
+2024-04-24 15:39:58,949: ### Device cpu will be used for training
+2024-04-24 15:39:58,950: Loading basin data into xarray data set.
+2024-04-24 15:39:59,123: Create lookup table and convert to pytorch tensor
+2024-04-24 15:40:00,658: Epoch 1 average loss: avg_loss: 0.26266, avg_total_loss: 0.26266
+2024-04-24 15:40:00,700: Using the model weights from global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/model_epoch001.pt
+2024-04-24 15:40:01,557: Stored metrics at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/test/model_epoch001/test_metrics.csv
+2024-04-24 15:40:01,560: Stored results at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/test/model_epoch001/test_results.p
+2024-04-24 15:40:01,586: Using the model weights from global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/model_epoch001.pt
+2024-04-24 15:40:01,828: Stored metrics at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:40:01,830: Stored results at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_153958/validation/model_epoch001/validation_results.p
+2024-04-24 15:40:01,850: Logging to global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/output.log initialized.
+2024-04-24 15:40:01,851: ### Folder structure created at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001
+2024-04-24 15:40:01,851: ### Run configurations for parallel_grid_search_test65_0.5_90
+2024-04-24 15:40:01,852: experiment_name: parallel_grid_search_test65_0.5_90
+2024-04-24 15:40:01,853: run_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001
+2024-04-24 15:40:01,854: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:40:01,854: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:40:01,855: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:40:01,856: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:40:01,857: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:40:01,857: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:40:01,858: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:40:01,859: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:40:01,859: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:40:01,860: device: cpu
+2024-04-24 15:40:01,861: validate_every: 5
+2024-04-24 15:40:01,861: validate_n_random_basins: 1
+2024-04-24 15:40:01,862: metrics: ['NSE', 'MSE']
+2024-04-24 15:40:01,862: model: cudalstm
+2024-04-24 15:40:01,863: head: regression
+2024-04-24 15:40:01,863: output_activation: linear
+2024-04-24 15:40:01,864: hidden_size: 65
+2024-04-24 15:40:01,864: initial_forget_bias: 3
+2024-04-24 15:40:01,865: output_dropout: 0.5
+2024-04-24 15:40:01,865: optimizer: Adam
+2024-04-24 15:40:01,866: loss: MSE
+2024-04-24 15:40:01,866: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:40:01,867: batch_size: 256
+2024-04-24 15:40:01,868: epochs: 1
+2024-04-24 15:40:01,868: clip_gradient_norm: 1
+2024-04-24 15:40:01,869: predict_last_n: 1
+2024-04-24 15:40:01,872: seq_length: 90
+2024-04-24 15:40:01,873: num_workers: 1
+2024-04-24 15:40:01,873: log_interval: 5
+2024-04-24 15:40:01,874: log_tensorboard: True
+2024-04-24 15:40:01,875: log_n_figures: 1
+2024-04-24 15:40:01,876: save_weights_every: 1
+2024-04-24 15:40:01,877: dataset: usace
+2024-04-24 15:40:01,877: data_dir: ../initial_exploration
+2024-04-24 15:40:01,878: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:40:01,879: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:40:01,880: number_of_basins: 1
+2024-04-24 15:40:01,880: train_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/train_data
+2024-04-24 15:40:01,881: img_log_dir: global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/img_log
+2024-04-24 15:40:01,884: ### Device cpu will be used for training
+2024-04-24 15:40:01,885: Loading basin data into xarray data set.
+2024-04-24 15:40:02,048: Create lookup table and convert to pytorch tensor
+2024-04-24 15:40:03,524: Epoch 1 average loss: avg_loss: 0.26682, avg_total_loss: 0.26682
+2024-04-24 15:40:03,567: Using the model weights from global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/model_epoch001.pt
+2024-04-24 15:40:03,899: Stored metrics at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/test/model_epoch001/test_metrics.csv
+2024-04-24 15:40:03,902: Stored results at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/test/model_epoch001/test_results.p
+2024-04-24 15:40:03,932: Using the model weights from global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/model_epoch001.pt
+2024-04-24 15:40:04,188: Stored metrics at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:40:04,190: Stored results at global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154001/validation/model_epoch001/validation_results.p
+2024-04-24 15:41:30,070: Logging to /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/output.log initialized.
+2024-04-24 15:41:30,072: ### Folder structure created at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130
+2024-04-24 15:41:30,073: ### Run configurations for parallel_grid_search_test63_0.5_90
+2024-04-24 15:41:30,074: experiment_name: parallel_grid_search_test63_0.5_90
+2024-04-24 15:41:30,075: run_dir: /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130
+2024-04-24 15:41:30,076: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:41:30,077: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:41:30,078: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:41:30,079: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:41:30,080: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:41:30,081: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:41:30,081: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:41:30,082: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:41:30,083: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:41:30,084: device: cpu
+2024-04-24 15:41:30,084: validate_every: 5
+2024-04-24 15:41:30,085: validate_n_random_basins: 1
+2024-04-24 15:41:30,086: metrics: ['NSE', 'MSE']
+2024-04-24 15:41:30,086: model: cudalstm
+2024-04-24 15:41:30,087: head: regression
+2024-04-24 15:41:30,087: output_activation: linear
+2024-04-24 15:41:30,088: hidden_size: 63
+2024-04-24 15:41:30,089: initial_forget_bias: 3
+2024-04-24 15:41:30,090: output_dropout: 0.5
+2024-04-24 15:41:30,090: optimizer: Adam
+2024-04-24 15:41:30,091: loss: MSE
+2024-04-24 15:41:30,092: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:41:30,092: batch_size: 256
+2024-04-24 15:41:30,093: epochs: 1
+2024-04-24 15:41:30,094: clip_gradient_norm: 1
+2024-04-24 15:41:30,094: predict_last_n: 1
+2024-04-24 15:41:30,095: seq_length: 90
+2024-04-24 15:41:30,095: num_workers: 1
+2024-04-24 15:41:30,096: log_interval: 5
+2024-04-24 15:41:30,097: log_tensorboard: True
+2024-04-24 15:41:30,097: log_n_figures: 1
+2024-04-24 15:41:30,098: save_weights_every: 1
+2024-04-24 15:41:30,099: dataset: usace
+2024-04-24 15:41:30,099: data_dir: ../initial_exploration
+2024-04-24 15:41:30,100: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:41:30,100: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:41:30,101: number_of_basins: 1
+2024-04-24 15:41:30,101: train_dir: /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/train_data
+2024-04-24 15:41:30,102: img_log_dir: /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/img_log
+2024-04-24 15:41:30,107: ### Device cpu will be used for training
+2024-04-24 15:41:30,109: Loading basin data into xarray data set.
+2024-04-24 15:41:30,271: Create lookup table and convert to pytorch tensor
+2024-04-24 15:41:31,860: Epoch 1 average loss: avg_loss: 0.23820, avg_total_loss: 0.23820
+2024-04-24 15:41:31,903: Using the model weights from /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/model_epoch001.pt
+2024-04-24 15:41:32,363: Stored metrics at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/test/model_epoch001/test_metrics.csv
+2024-04-24 15:41:32,366: Stored results at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/test/model_epoch001/test_results.p
+2024-04-24 15:41:32,394: Using the model weights from /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/model_epoch001.pt
+2024-04-24 15:41:32,628: Stored metrics at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:41:32,631: Stored results at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test63_0.5_90_2404_154130/validation/model_epoch001/validation_results.p
+2024-04-24 15:41:32,648: Logging to /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/output.log initialized.
+2024-04-24 15:41:32,649: ### Folder structure created at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132
+2024-04-24 15:41:32,649: ### Run configurations for parallel_grid_search_test65_0.5_90
+2024-04-24 15:41:32,650: experiment_name: parallel_grid_search_test65_0.5_90
+2024-04-24 15:41:32,651: run_dir: /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132
+2024-04-24 15:41:32,652: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:41:32,652: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:41:32,653: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:41:32,654: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:41:32,654: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:41:32,656: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:41:32,656: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:41:32,657: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:41:32,658: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:41:32,659: device: cpu
+2024-04-24 15:41:32,659: validate_every: 5
+2024-04-24 15:41:32,660: validate_n_random_basins: 1
+2024-04-24 15:41:32,661: metrics: ['NSE', 'MSE']
+2024-04-24 15:41:32,661: model: cudalstm
+2024-04-24 15:41:32,662: head: regression
+2024-04-24 15:41:32,663: output_activation: linear
+2024-04-24 15:41:32,663: hidden_size: 65
+2024-04-24 15:41:32,664: initial_forget_bias: 3
+2024-04-24 15:41:32,665: output_dropout: 0.5
+2024-04-24 15:41:32,665: optimizer: Adam
+2024-04-24 15:41:32,666: loss: MSE
+2024-04-24 15:41:32,667: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:41:32,667: batch_size: 256
+2024-04-24 15:41:32,668: epochs: 1
+2024-04-24 15:41:32,668: clip_gradient_norm: 1
+2024-04-24 15:41:32,669: predict_last_n: 1
+2024-04-24 15:41:32,669: seq_length: 90
+2024-04-24 15:41:32,670: num_workers: 1
+2024-04-24 15:41:32,670: log_interval: 5
+2024-04-24 15:41:32,671: log_tensorboard: True
+2024-04-24 15:41:32,671: log_n_figures: 1
+2024-04-24 15:41:32,672: save_weights_every: 1
+2024-04-24 15:41:32,673: dataset: usace
+2024-04-24 15:41:32,673: data_dir: ../initial_exploration
+2024-04-24 15:41:32,674: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:41:32,674: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:41:32,675: number_of_basins: 1
+2024-04-24 15:41:32,675: train_dir: /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/train_data
+2024-04-24 15:41:32,675: img_log_dir: /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/img_log
+2024-04-24 15:41:32,679: ### Device cpu will be used for training
+2024-04-24 15:41:32,680: Loading basin data into xarray data set.
+2024-04-24 15:41:32,845: Create lookup table and convert to pytorch tensor
+2024-04-24 15:41:34,457: Epoch 1 average loss: avg_loss: 0.26251, avg_total_loss: 0.26251
+2024-04-24 15:41:34,501: Using the model weights from /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/model_epoch001.pt
+2024-04-24 15:41:34,813: Stored metrics at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/test/model_epoch001/test_metrics.csv
+2024-04-24 15:41:34,816: Stored results at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/test/model_epoch001/test_results.p
+2024-04-24 15:41:34,845: Using the model weights from /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/model_epoch001.pt
+2024-04-24 15:41:35,117: Stored metrics at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:41:35,120: Stored results at /global/home/groups/pc_dsdisc/ESDL/parallel_grid_search_test65_0.5_90_2404_154132/validation/model_epoch001/validation_results.p
+2024-04-24 15:47:55,849: Logging to /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/output.log initialized.
+2024-04-24 15:47:55,850: ### Folder structure created at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755
+2024-04-24 15:47:55,851: ### Run configurations for parallel_grid_search_test63_0.5_90
+2024-04-24 15:47:55,852: data_dir: /global/scratch/users/evanrobert
+2024-04-24 15:47:55,853: experiment_name: parallel_grid_search_test63_0.5_90
+2024-04-24 15:47:55,854: run_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755
+2024-04-24 15:47:55,855: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:47:55,856: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:47:55,857: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:47:55,858: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:47:55,859: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:47:55,860: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:47:55,861: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:47:55,861: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:47:55,862: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:47:55,862: device: cpu
+2024-04-24 15:47:55,863: validate_every: 5
+2024-04-24 15:47:55,864: validate_n_random_basins: 1
+2024-04-24 15:47:55,864: metrics: ['NSE', 'MSE']
+2024-04-24 15:47:55,865: model: cudalstm
+2024-04-24 15:47:55,865: head: regression
+2024-04-24 15:47:55,866: output_activation: linear
+2024-04-24 15:47:55,867: hidden_size: 63
+2024-04-24 15:47:55,869: initial_forget_bias: 3
+2024-04-24 15:47:55,869: output_dropout: 0.5
+2024-04-24 15:47:55,870: optimizer: Adam
+2024-04-24 15:47:55,871: loss: MSE
+2024-04-24 15:47:55,872: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:47:55,872: batch_size: 256
+2024-04-24 15:47:55,873: epochs: 1
+2024-04-24 15:47:55,874: clip_gradient_norm: 1
+2024-04-24 15:47:55,874: predict_last_n: 1
+2024-04-24 15:47:55,875: seq_length: 90
+2024-04-24 15:47:55,876: num_workers: 1
+2024-04-24 15:47:55,877: log_interval: 5
+2024-04-24 15:47:55,877: log_tensorboard: True
+2024-04-24 15:47:55,878: log_n_figures: 1
+2024-04-24 15:47:55,879: save_weights_every: 1
+2024-04-24 15:47:55,880: dataset: usace
+2024-04-24 15:47:55,881: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:47:55,882: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:47:55,882: number_of_basins: 1
+2024-04-24 15:47:55,883: train_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/train_data
+2024-04-24 15:47:55,884: img_log_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/img_log
+2024-04-24 15:47:55,891: ### Device cpu will be used for training
+2024-04-24 15:47:55,895: Loading basin data into xarray data set.
+2024-04-24 15:47:56,245: Create lookup table and convert to pytorch tensor
+2024-04-24 15:47:57,866: Epoch 1 average loss: avg_loss: 0.24590, avg_total_loss: 0.24590
+2024-04-24 15:47:58,025: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/model_epoch001.pt
+2024-04-24 15:47:58,374: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/test/model_epoch001/test_metrics.csv
+2024-04-24 15:47:58,378: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/test/model_epoch001/test_results.p
+2024-04-24 15:47:58,406: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/model_epoch001.pt
+2024-04-24 15:47:58,681: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:47:58,686: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_154755/validation/model_epoch001/validation_results.p
+2024-04-24 15:47:58,699: Logging to /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/output.log initialized.
+2024-04-24 15:47:58,700: ### Folder structure created at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758
+2024-04-24 15:47:58,701: ### Run configurations for parallel_grid_search_test65_0.5_90
+2024-04-24 15:47:58,703: data_dir: /global/scratch/users/evanrobert
+2024-04-24 15:47:58,703: experiment_name: parallel_grid_search_test65_0.5_90
+2024-04-24 15:47:58,704: run_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758
+2024-04-24 15:47:58,705: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:47:58,705: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:47:58,706: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:47:58,707: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:47:58,707: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:47:58,708: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:47:58,709: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:47:58,709: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:47:58,710: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:47:58,712: device: cpu
+2024-04-24 15:47:58,712: validate_every: 5
+2024-04-24 15:47:58,713: validate_n_random_basins: 1
+2024-04-24 15:47:58,713: metrics: ['NSE', 'MSE']
+2024-04-24 15:47:58,714: model: cudalstm
+2024-04-24 15:47:58,714: head: regression
+2024-04-24 15:47:58,715: output_activation: linear
+2024-04-24 15:47:58,716: hidden_size: 65
+2024-04-24 15:47:58,716: initial_forget_bias: 3
+2024-04-24 15:47:58,717: output_dropout: 0.5
+2024-04-24 15:47:58,717: optimizer: Adam
+2024-04-24 15:47:58,718: loss: MSE
+2024-04-24 15:47:58,718: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:47:58,719: batch_size: 256
+2024-04-24 15:47:58,720: epochs: 1
+2024-04-24 15:47:58,720: clip_gradient_norm: 1
+2024-04-24 15:47:58,721: predict_last_n: 1
+2024-04-24 15:47:58,722: seq_length: 90
+2024-04-24 15:47:58,722: num_workers: 1
+2024-04-24 15:47:58,723: log_interval: 5
+2024-04-24 15:47:58,723: log_tensorboard: True
+2024-04-24 15:47:58,724: log_n_figures: 1
+2024-04-24 15:47:58,724: save_weights_every: 1
+2024-04-24 15:47:58,725: dataset: usace
+2024-04-24 15:47:58,725: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:47:58,726: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:47:58,726: number_of_basins: 1
+2024-04-24 15:47:58,727: train_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/train_data
+2024-04-24 15:47:58,727: img_log_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/img_log
+2024-04-24 15:47:58,731: ### Device cpu will be used for training
+2024-04-24 15:47:58,732: Loading basin data into xarray data set.
+2024-04-24 15:47:58,891: Create lookup table and convert to pytorch tensor
+2024-04-24 15:48:00,515: Epoch 1 average loss: avg_loss: 0.23956, avg_total_loss: 0.23956
+2024-04-24 15:48:01,779: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/model_epoch001.pt
+2024-04-24 15:48:02,409: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/test/model_epoch001/test_metrics.csv
+2024-04-24 15:48:02,414: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/test/model_epoch001/test_results.p
+2024-04-24 15:48:02,449: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/model_epoch001.pt
+2024-04-24 15:48:02,763: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:48:02,768: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_154758/validation/model_epoch001/validation_results.p
+2024-04-24 15:53:04,796: Logging to /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/output.log initialized.
+2024-04-24 15:53:04,800: ### Folder structure created at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304
+2024-04-24 15:53:04,801: ### Run configurations for parallel_grid_search_test63_0.5_90
+2024-04-24 15:53:04,802: data_dir: /global/scratch/users/evanrobert
+2024-04-24 15:53:04,802: experiment_name: parallel_grid_search_test63_0.5_90
+2024-04-24 15:53:04,804: run_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304
+2024-04-24 15:53:04,805: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:53:04,805: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:53:04,806: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:53:04,807: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:53:04,808: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:53:04,808: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:53:04,809: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:53:04,811: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:53:04,812: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:53:04,813: device: cpu
+2024-04-24 15:53:04,813: validate_every: 5
+2024-04-24 15:53:04,814: validate_n_random_basins: 1
+2024-04-24 15:53:04,815: metrics: ['NSE', 'MSE']
+2024-04-24 15:53:04,816: model: cudalstm
+2024-04-24 15:53:04,816: head: regression
+2024-04-24 15:53:04,818: output_activation: linear
+2024-04-24 15:53:04,819: hidden_size: 63
+2024-04-24 15:53:04,819: initial_forget_bias: 3
+2024-04-24 15:53:04,820: output_dropout: 0.5
+2024-04-24 15:53:04,821: optimizer: Adam
+2024-04-24 15:53:04,821: loss: MSE
+2024-04-24 15:53:04,822: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:53:04,822: batch_size: 256
+2024-04-24 15:53:04,823: epochs: 1
+2024-04-24 15:53:04,824: clip_gradient_norm: 1
+2024-04-24 15:53:04,824: predict_last_n: 1
+2024-04-24 15:53:04,826: seq_length: 90
+2024-04-24 15:53:04,827: num_workers: 1
+2024-04-24 15:53:04,828: log_interval: 5
+2024-04-24 15:53:04,829: log_tensorboard: True
+2024-04-24 15:53:04,829: log_n_figures: 1
+2024-04-24 15:53:04,830: save_weights_every: 1
+2024-04-24 15:53:04,831: dataset: usace
+2024-04-24 15:53:04,831: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:53:04,832: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:53:04,833: number_of_basins: 1
+2024-04-24 15:53:04,834: train_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/train_data
+2024-04-24 15:53:04,835: img_log_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/img_log
+2024-04-24 15:53:04,846: ### Device cpu will be used for training
+2024-04-24 15:53:04,848: Loading basin data into xarray data set.
+2024-04-24 15:53:05,048: Create lookup table and convert to pytorch tensor
+2024-04-24 15:53:06,654: Epoch 1 average loss: avg_loss: 0.24021, avg_total_loss: 0.24021
+2024-04-24 15:53:06,736: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/model_epoch001.pt
+2024-04-24 15:53:07,960: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/test/model_epoch001/test_metrics.csv
+2024-04-24 15:53:07,963: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/test/model_epoch001/test_results.p
+2024-04-24 15:53:07,995: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/model_epoch001.pt
+2024-04-24 15:53:08,270: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:53:08,274: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test63_0.5_90_2404_155304/validation/model_epoch001/validation_results.p
+2024-04-24 15:53:08,288: Logging to /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/output.log initialized.
+2024-04-24 15:53:08,289: ### Folder structure created at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308
+2024-04-24 15:53:08,290: ### Run configurations for parallel_grid_search_test65_0.5_90
+2024-04-24 15:53:08,291: data_dir: /global/scratch/users/evanrobert
+2024-04-24 15:53:08,291: experiment_name: parallel_grid_search_test65_0.5_90
+2024-04-24 15:53:08,292: run_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308
+2024-04-24 15:53:08,293: train_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:53:08,293: validation_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:53:08,294: test_basin_file: ../initial_exploration/exploration_tuler
+2024-04-24 15:53:08,295: train_start_date: 1981-10-01 00:00:00
+2024-04-24 15:53:08,295: train_end_date: 1997-09-30 00:00:00
+2024-04-24 15:53:08,296: validation_start_date: 1997-10-01 00:00:00
+2024-04-24 15:53:08,297: validation_end_date: 2000-09-30 00:00:00
+2024-04-24 15:53:08,297: test_start_date: 2000-10-01 00:00:00
+2024-04-24 15:53:08,298: test_end_date: 2005-09-30 00:00:00
+2024-04-24 15:53:08,298: device: cpu
+2024-04-24 15:53:08,299: validate_every: 5
+2024-04-24 15:53:08,299: validate_n_random_basins: 1
+2024-04-24 15:53:08,300: metrics: ['NSE', 'MSE']
+2024-04-24 15:53:08,301: model: cudalstm
+2024-04-24 15:53:08,301: head: regression
+2024-04-24 15:53:08,302: output_activation: linear
+2024-04-24 15:53:08,303: hidden_size: 65
+2024-04-24 15:53:08,303: initial_forget_bias: 3
+2024-04-24 15:53:08,304: output_dropout: 0.5
+2024-04-24 15:53:08,304: optimizer: Adam
+2024-04-24 15:53:08,305: loss: MSE
+2024-04-24 15:53:08,306: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2024-04-24 15:53:08,306: batch_size: 256
+2024-04-24 15:53:08,307: epochs: 1
+2024-04-24 15:53:08,308: clip_gradient_norm: 1
+2024-04-24 15:53:08,308: predict_last_n: 1
+2024-04-24 15:53:08,309: seq_length: 90
+2024-04-24 15:53:08,309: num_workers: 1
+2024-04-24 15:53:08,310: log_interval: 5
+2024-04-24 15:53:08,310: log_tensorboard: True
+2024-04-24 15:53:08,311: log_n_figures: 1
+2024-04-24 15:53:08,311: save_weights_every: 1
+2024-04-24 15:53:08,312: dataset: usace
+2024-04-24 15:53:08,312: dynamic_inputs: ['MF_TuleR_S10ET-POTENTIAL', 'MF_TuleR_S10FLOW', 'MF_TuleR_S10PRECIP-INC', 'MF_TuleR_S10SATURATION FRACTION', 'MF_TuleR_S10STORAGE-SOIL', 'MF_TuleR_S10SWE-OBSERVED', 'MF_TuleR_S10TEMPERATURE-AIR', 'MF_TuleR_S20ET-POTENTIAL', 'MF_TuleR_S20FLOW', 'MF_TuleR_S20PRECIP-INC', 'MF_TuleR_S20SATURATION FRACTION', 'MF_TuleR_S20STORAGE-SOIL', 'MF_TuleR_S20SWE-OBSERVED', 'MF_TuleR_S20TEMPERATURE-AIR', 'NF_TuleR_S10ET-POTENTIAL', 'NF_TuleR_S10FLOW', 'NF_TuleR_S10PRECIP-INC', 'NF_TuleR_S10SATURATION FRACTION', 'NF_TuleR_S10STORAGE-SOIL', 'NF_TuleR_S10SWE-OBSERVED', 'NF_TuleR_S10TEMPERATURE-AIR', 'ReservoirInflowFLOW', 'SF_TuleR_S10ET-POTENTIAL', 'SF_TuleR_S10FLOW', 'SF_TuleR_S10PRECIP-INC', 'SF_TuleR_S10SATURATION FRACTION', 'SF_TuleR_S10STORAGE-SOIL', 'SF_TuleR_S10SWE-OBSERVED', 'SF_TuleR_S10TEMPERATURE-AIR', 'TuleR_S10ET-POTENTIAL', 'TuleR_S10FLOW', 'TuleR_S10PRECIP-INC', 'TuleR_S10SATURATION FRACTION', 'TuleR_S10STORAGE-SOIL', 'TuleR_S10TEMPERATURE-AIR', 'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC', 'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL', 'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+2024-04-24 15:53:08,313: target_variables: ['ReservoirInflowFLOW-OBSERVED']
+2024-04-24 15:53:08,314: number_of_basins: 1
+2024-04-24 15:53:08,314: train_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/train_data
+2024-04-24 15:53:08,315: img_log_dir: /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/img_log
+2024-04-24 15:53:08,318: ### Device cpu will be used for training
+2024-04-24 15:53:08,319: Loading basin data into xarray data set.
+2024-04-24 15:53:08,478: Create lookup table and convert to pytorch tensor
+2024-04-24 15:53:10,088: Epoch 1 average loss: avg_loss: 0.24166, avg_total_loss: 0.24166
+2024-04-24 15:53:10,161: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/model_epoch001.pt
+2024-04-24 15:53:10,479: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/test/model_epoch001/test_metrics.csv
+2024-04-24 15:53:10,484: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/test/model_epoch001/test_results.p
+2024-04-24 15:53:10,515: Using the model weights from /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/model_epoch001.pt
+2024-04-24 15:53:10,773: Stored metrics at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/validation/model_epoch001/validation_metrics.csv
+2024-04-24 15:53:10,780: Stored results at /global/scratch/users/evanrobert/parallel_test/parallel_grid_search_test65_0.5_90_2404_155308/validation/model_epoch001/validation_results.p
