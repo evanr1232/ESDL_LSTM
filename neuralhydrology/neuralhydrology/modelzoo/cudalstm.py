@@ -2,6 +2,7 @@ from typing import Dict
 
 import torch
 import torch.nn as nn
+torch.set_num_threads(1)
 
 from neuralhydrology.modelzoo.inputlayer import InputLayer
 from neuralhydrology.modelzoo.head import get_head

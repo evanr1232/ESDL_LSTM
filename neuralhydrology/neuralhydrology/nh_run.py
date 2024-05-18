@@ -80,6 +80,26 @@ def start_run(config_file: Path, gpu: int = None):
 
     start_training(config)
 
+def ESDL_start_run(config: Config, gpu: int = None):
+    """Start training a model.
+    
+    Parameters
+    ----------
+    config_file : Path
+        Path to a configuration file (.yml), defining the settings for the specific run.
+    gpu : int, optional
+        GPU id to use. Will override config argument 'device'. A value smaller than zero indicates CPU.
+
+    """
+
+    # check if a GPU has been specified as command line argument. If yes, overwrite config
+    if gpu is not None and gpu >= 0:
+        config.device = f"cuda:{gpu}"
+    if gpu is not None and gpu < 0:
+        config.device = "cpu"
+
+    start_training(config)
+
 
 def continue_run(run_dir: Path, config_file: Path = None, gpu: int = None):
     """Continue model training.

@@ -85,14 +85,45 @@ class USACE(BaseDataset):
                                     'TuleR_S10SWE-OBSERVED', 'TuleR_S10TEMPERATURE-AIR',
                                     'TuleR_S20ET-POTENTIAL', 'TuleR_S20FLOW', 'TuleR_S20PRECIP-INC',
                                     'TuleR_S20SATURATION FRACTION', 'TuleR_S20STORAGE-SOIL',
-                                    'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR']
+                                    'TuleR_S20SWE-OBSERVED', 'TuleR_S20TEMPERATURE-AIR', 
+                                    'water_budget', 'normalized_precip']
                         }
 
-        discharge_d = { 'Tuler': ['ReservoirInflowFLOW-OBSERVED']
+        discharge_d = { 'Tuler': ['ReservoirInflowFLOW-OBSERVED-ft3/day']
                         }
-       
+
+        #area in square miles
+        MF_TuleR_S20_area = 85.800
+        NF_TuleR_S10_area = 98.066
+        MF_TuleR_S10_area = 23.944
+        TuleR_S20_area = 39.521
+        SF_TuleR_S10_area = 110.080
+        TuleR_S10_area = 32.874
+        mm_in_a_ft = 304.8
+        sq_ft_in_sq_mile = 2.788e+7
+        num_seconds_per_day = 86400
+        inches_in_foot = 12
+        
+
+        #acre ft 
+
         #load data into df from csv
         df = pd.read_csv(str(self.cfg.data_dir) + f'/HMS_inflow_results_data.csv', index_col = 'Date', parse_dates=True)
+        
+        # dry watershed, and small, so water goes into the sysstem within 24 hrs
+        #check if magnitudes are the same between outflow and precip
+
+        df['water_budget'] = df['TuleR_S20SWE-OBSERVED'] + df['TuleR_S20PRECIP-INC'] + df['TuleR_S10SWE-OBSERVED'] + df['TuleR_S10PRECIP-INC'] + df['SF_TuleR_S10SWE-OBSERVED'] + df['SF_TuleR_S10PRECIP-INC'] + df['NF_TuleR_S10SWE-OBSERVED'] + df['NF_TuleR_S10PRECIP-INC'] + df['MF_TuleR_S20SWE-OBSERVED'] + df['MF_TuleR_S20PRECIP-INC'] + df['MF_TuleR_S10SWE-OBSERVED'] + df['MF_TuleR_S10PRECIP-INC'] - df['MF_TuleR_S10ET-POTENTIAL'] - df['MF_TuleR_S20ET-POTENTIAL'] - df['NF_TuleR_S10ET-POTENTIAL'] - df['SF_TuleR_S10ET-POTENTIAL'] - df['TuleR_S10ET-POTENTIAL'] - df['TuleR_S20ET-POTENTIAL']
+        
+        df['normalized_precip_cubic_mm'] = (df['TuleR_S20PRECIP-INC']*TuleR_S20_area + df['TuleR_S10PRECIP-INC']*TuleR_S10_area 
+                                    + df['SF_TuleR_S10PRECIP-INC']*SF_TuleR_S10_area + df['NF_TuleR_S10PRECIP-INC']*NF_TuleR_S10_area
+                                    + df['MF_TuleR_S20PRECIP-INC']*MF_TuleR_S20_area + df['MF_TuleR_S10PRECIP-INC']*MF_TuleR_S10_area)
+
+        # precipitation is mm per basin per day (want in cubic ft)
+        df['normalized_precip'] = df['normalized_precip_cubic_mm'] / inches_in_foot * sq_ft_in_sq_mile
+
+        # inflow is cubic ft per sec averaged over the day (need to multiply by num seconds in a day)
+        df['ReservoirInflowFLOW-OBSERVED-ft3/day'] = df['ReservoirInflowFLOW-OBSERVED'] * num_seconds_per_day
     
         #only select the forcings, observed data you want by only selecting the columns that correspond to the above dictionary for that basin
         df = df.loc[:, forcings_d[basin]+discharge_d[basin]]

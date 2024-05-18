@@ -701,6 +701,8 @@ def missed_peaks(obs: DataArray,
         if len(nearby_peak_sim_index) == 0:
             missed_events += 1
 
+    print(f"missed peaks: {missed_events}")
+    print(f"num peaks: {len(peaks_obs_times)}")
     return missed_events / len(peaks_obs_times)
 
 
@@ -797,7 +799,8 @@ def calculate_all_metrics(obs: DataArray,
         "FMS": fdc_fms(obs, sim),
         "FLV": fdc_flv(obs, sim),
         "Peak-Timing": mean_peak_timing(obs, sim, resolution=resolution, datetime_coord=datetime_coord),
-        "Peak-MAPE": mean_absolute_percentage_peak_error(obs, sim)
+        "Peak-MAPE": mean_absolute_percentage_peak_error(obs, sim),
+        "Missed-Peaks": missed_peaks(obs, sim, 5)
     }
 
     return results
