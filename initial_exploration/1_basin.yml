@@ -75,7 +75,7 @@ learning_rate:
 batch_size: 256
 
 # Number of training epochs
-epochs: 14
+epochs: 16
 
 # If a value, clips the gradients during training to that norm.
 clip_gradient_norm: 1
@@ -92,7 +92,7 @@ seq_length: 365
 num_workers: 8
 
 # Log the training loss every n steps
-log_interval: 5
+log_interval: 4
 
 # If true, writes logging results into tensorboard file
 log_tensorboard: True
