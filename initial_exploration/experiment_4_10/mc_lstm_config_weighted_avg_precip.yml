@@ -107,7 +107,8 @@ save_weights_every: 8
 dataset: usace
 
 # Path to data set root
-data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins/
+#data_dir: /Users/evanrobert/Documents/ESDL_Research/Training_Data_3_Basins/
+data_dir: /global/scratch/users/evanrobert/
 
 # Forcing product [daymet, maurer, maurer_extended, nldas, nldas_extended, nldas_hourly]
 # can be either a list of forcings or a single forcing product
